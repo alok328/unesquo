@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Home">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:background="@drawable/backgrnd"
+        android:layout_height="200dp"
+        android:elevation="0dp"
+        android:gravity="center">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="10">
+
+            <ImageView
+                android:id="@+id/topImg"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="8"
+                android:src="@drawable/logounesquo"
+                android:onClick="adminSection"/>
+
+            <LinearLayout
+                android:layout_weight="2"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/fbf"
+                    android:scaleType="centerCrop"
+                    android:layout_width="45dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="45dp"
+                    android:onClick="facebook"/>
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_chat_bubble_black_24dp"
+                    android:layout_width="30dp"
+                    android:layout_height="40dp"
+                    android:onClick="about"/>
+
+                <ImageView
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_bookmark_black_24dp"
+                    android:layout_width="30dp"
+                    android:layout_marginLeft="12dp"
+                    android:layout_height="40dp"
+                    android:onClick="privacyPolicy"/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tabLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/backgrnd"
+        app:tabGravity="fill"
+        app:tabIndicatorColor="#ffffff"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="#ffffff"
+        app:tabTextColor="@color/tabTextColor" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </android.support.v4.view.ViewPager>
+
+</LinearLayout>

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/backgrnd">
+
+    <LinearLayout
+        android:id="@+id/quizLinear"
+        android:visibility="visible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/listQuiz"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="9">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <Button
+            android:layout_below="@+id/listQuiz"
+            android:id="@+id/instButton"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:text="Instructions"
+            android:background="#00001a"
+            android:textColor="@android:color/white"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/instLinear"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="10">
+
+        <TextView
+            android:id="@+id/instText"
+            android:layout_width="match_parent"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:layout_height="0dp"
+            android:layout_weight="9"/>
+
+        <Button
+            android:layout_below="@+id/listQuiz"
+            android:id="@+id/backQuizButton"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:text="OK"
+            android:background="#00001a"
+            android:textColor="@android:color/white"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            />
+
+    </LinearLayout>
+
+</RelativeLayout>

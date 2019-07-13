@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".AdminQuizList">
+
+    <TextView
+        android:id="@+id/title"
+        android:textColor="@color/tabIndicatorColor"
+        android:text="Current Quiz Being displayed"
+        android:gravity="center"
+        android:textStyle="bold|italic"
+        android:padding="5dp"
+        android:textSize="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+
+
+    <LinearLayout
+        android:id="@+id/quizAdminLinear"
+        android:visibility="visible"
+        android:layout_below="@+id/title"
+        android:orientation="vertical"
+        android:weightSum="10"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/listQuizAdmin"
+            android:layout_below="@+id/title"
+            android:padding="15dp"
+            android:layout_marginBottom="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="8">
+
+        </android.support.v7.widget.RecyclerView>
+
+        <Button
+            android:id="@+id/editInstructionButton"
+            android:layout_width="160dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@android:color/white"
+            android:layout_gravity="center"
+            android:text="edit Instructions"/>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <info.hoang8f.widget.FButton
+                android:id="@+id/goBack"
+                android:layout_alignParentBottom="true"
+                android:text="Back"
+                android:textColor="@android:color/white"
+                app:buttonColor="@color/tabIndicatorColor"
+                android:layout_width="0dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+
+            <info.hoang8f.widget.FButton
+                android:id="@+id/addContent"
+                android:layout_alignParentBottom="true"
+                android:text="Add Content"
+                android:textColor="@android:color/white"
+                app:buttonColor="@color/tabIndicatorColor"
+                android:layout_width="0dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/instructionAdminLinear"
+        android:visibility="invisible"
+        android:layout_below="@+id/title"
+        android:orientation="vertical"
+        android:weightSum="10"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <EditText
+            android:id="@+id/editInstruction"
+            android:layout_margin="15dp"
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <info.hoang8f.widget.FButton
+                android:id="@+id/updateInstructionAdmin"
+                android:layout_alignParentBottom="true"
+                android:text="Update"
+                android:textColor="@android:color/white"
+                app:buttonColor="@color/tabIndicatorColor"
+                android:layout_width="0dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+
+            <info.hoang8f.widget.FButton
+                android:id="@+id/goBackQuizAdmin"
+                android:layout_alignParentBottom="true"
+                android:text="Back"
+                android:textColor="@android:color/white"
+                app:buttonColor="@color/tabIndicatorColor"
+                android:layout_width="0dp"
+                android:layout_margin="2dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</RelativeLayout>
